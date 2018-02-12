@@ -1,0 +1,21 @@
+tell application "System Preferences"
+	activate
+	reveal anchor "TextToSpeech" of pane "Accessibility"
+end tell
+
+tell application "System Events"
+	tell process "System Preferences"
+		delay 0.3
+		tell pop up button 1 of window 1
+			delay 0.1
+			click
+			if value is "Daniel" then
+				click menu item "Daniel" of menu 1
+			else
+				click menu item "Daniel" of menu 1
+			end if
+		end tell
+	end tell
+end tell
+
+quit application "System Preferences"
